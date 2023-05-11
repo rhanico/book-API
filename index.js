@@ -2,6 +2,8 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 
+app.use('/books', require('./controllers/books'))
+
 app.get('/', (req, res) => {
     res.send('Hello world!')
 })
